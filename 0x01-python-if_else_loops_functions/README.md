@@ -12,3 +12,4 @@
 ### Progarm that returns power of number
 ### Program that prints numbers in a range
 ### Program that alternates while printing ASCII alphabet
+### Program to remove character at index
