@@ -3,4 +3,3 @@ import os
 import compileall
 pfile = os.environ.get("PYFILE")
 compileall.compile_file(pfile, doraise=True)
-
