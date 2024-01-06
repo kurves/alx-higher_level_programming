@@ -1,3 +1,2 @@
 #!/usr/bin/python3
-write = getattr(__builtins__, 'print')
-write("#pythoniscool")
+exec(compile("print('#pythoniscool')", "<string>", "exec"))
