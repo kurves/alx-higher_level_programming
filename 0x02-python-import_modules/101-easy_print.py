@@ -1,3 +1,2 @@
 #!/usr/bin/python3
-import builtins
-builtins.print("#pythoniscool")
+exec(compile("print('#pythoniscool')", "<string>", "exec"))
