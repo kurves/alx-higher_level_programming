@@ -7,3 +7,4 @@
 ### Program that returns the number of keys
 ### Program that returns a dictionary sorted by keys
 ### Program that adds a value to a dictionary
+### Program to delete a key from dictionary
