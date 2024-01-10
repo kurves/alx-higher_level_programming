@@ -10,3 +10,4 @@
 ### Program to delete a key from dictionary
 ### Program that multiplies all keys of a dictionary
 ### Program that returns the biggest integer value
+### Program to multiply values using map
