@@ -7,7 +7,7 @@ def weight_average(my_list=[]):
     for s, w in my_list:
         score += s * w
         weight += w
-        if weight == 0:
-            return 0
-        weighted_average = score / weight
-        return weighted_average
+    if weight == 0:
+        return 0
+    weighted_average = score / weight
+    return weighted_average
