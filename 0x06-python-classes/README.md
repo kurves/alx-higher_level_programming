@@ -5,3 +5,4 @@
 ### Class method to get area
 ### accessing private atributes using setters and getters
 #### Function to print area
+#### funcion to set te position of square
