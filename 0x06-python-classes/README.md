@@ -6,3 +6,5 @@
 ### accessing private atributes using setters and getters
 #### Function to print area
 #### funcion to set te position of square
+### Function to print saure instance
+### compare two squares
