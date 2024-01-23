@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+
+"""define class and setter and getters"""
+
+
 class Square:
     """class defining a class"""
     def __init__(self, size=0):
@@ -34,9 +38,10 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = size
+
     def area(self):
         """
         calculates and return area
         Returns: int
         """
-        return self.__size ** 2 
+        return self.__size ** 2
