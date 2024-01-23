@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+
+"""define a class with size as a private attribute"""
+
+
 class Square:
     """class defining a class"""
     def __init__(self, size=0):
