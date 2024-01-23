@@ -1,7 +1,11 @@
-!/usr/bin/python3
+#!/usr/bin/python3
+
+"""DEFINE CLASS"""
+
+
 class Square:
     """class defining a class"""
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         """
         initializes a new instance of class
         Args:
@@ -52,18 +56,21 @@ class Square:
             TypeError: If value is not a tuple
             ValueError: if tuple contains invalid values.
         """
-        if not isinstance(value, tuple) or len != 2 or not all(instances(i, int) for i in value):
+        if not isinstance(value, tuple) or \
+                len != 2 or not all(instances(i, int) for i in value):
             raise TypeError("size must be an integer")
         elif any(i < 0 for i in value):
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
+
     def area(self):
         """
         calculates and return area
         Returns: int
         """
         return self.__size ** 2
+
     def print(self):
         """prints the area"""
         if self.__size == 0:
