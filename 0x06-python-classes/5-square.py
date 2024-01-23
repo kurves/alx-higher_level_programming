@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+
+"""Define a class and print area"""
+
+
 class Square:
     """class defining a class"""
     def __init__(self, size=0):
@@ -18,7 +22,7 @@ class Square:
         return self.__size
 
     @size.setter
-    def size():
+    def size(self, value):
         """
         Set the size.
 
@@ -28,18 +32,20 @@ class Square:
             TypeError: If value is not an integer.
             ValueError: If value is less than 0.
         """
-        if not isinstance(size, int):
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        elif size < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
         else:
-            self.__size = size
+            self.__size = value
+
     def area(self):
         """
         calculates and return area
         Returns: int
         """
         return self.__size ** 2
+
     def print(self):
         """prints the area"""
         if self.__size == 0:
