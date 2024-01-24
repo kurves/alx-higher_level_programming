@@ -3,3 +3,4 @@
 ### Function to print and count integers
 ### Function to divide integers safely
 ### Function to divide elements
+### Function to raise an exception
