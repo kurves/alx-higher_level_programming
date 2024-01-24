@@ -6,7 +6,7 @@ def safe_print_division(a, b):
     except ZeroDivisionError:
         print("Inside result: None")
     except (TypeError, ValueError):
-        print("Inside result: invalid input, both values must be integers")
+        print("Inside result: invalid input")
     finally:
         if result is not None:
             print("Inside result: {:.1f}".format(result))
