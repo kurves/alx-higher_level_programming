@@ -6,3 +6,4 @@
 ### Function to raise an exception
 ### function that raises a message
 ### Function to print integer
+### function to execute function safely
