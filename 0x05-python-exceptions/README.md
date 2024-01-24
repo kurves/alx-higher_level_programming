@@ -7,3 +7,4 @@
 ### function that raises a message
 ### Function to print integer
 ### function to execute function safely
+### python code to match given bytecode
