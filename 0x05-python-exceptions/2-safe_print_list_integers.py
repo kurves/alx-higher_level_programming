@@ -9,7 +9,5 @@ def safe_print_list_integers(my_list=[], x=0):
         print()
     except (ValueError, TypeError):
         pass
-    except IndexError:
-        print("IndexError: list index out of range")
     finally:
         return count
