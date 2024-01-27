@@ -1,0 +1,23 @@
+
+# Test cases:
+
+>>> text_indentation("Hello, world. How are you?")
+Hello, world.
+
+How are you?
+
+>>> text_indentation("This is a sentence: with a colon.")
+This is a sentence:
+
+with a colon.
+
+>>> text_indentation("This is a question? And another question?")
+This is a question?
+
+And another question?
+
+>>> text_indentation(123)  # Test for TypeError
+Traceback (most recent call last):
+	File "<stdin>", line 1, in <module>
+	File "<docstring>", line 7, in text_indentation
+TypeError: text must be a string
