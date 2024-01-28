@@ -1,7 +1,12 @@
-#File: tests/0-add_integer.txt
+Usage
+=====
+
+``add_integer(...)``` returns the addition of its two arguments. For numbers,
+that value is equivalent to using the ``+`` operator.
+
+add_integer = __import__('0-add_integer', globals(), locals(), ['add_integer']).add_integer
 
 #Test case 1: adds two integers
-
 >>> add_integer(2, 98)    
 100
 
@@ -12,3 +17,15 @@
 #Test case 3: adds two floats
 >>> add_integer(2.5, 2.5)
 5
+
+# Test case 4: incorrect input type (string)
+>>> add_integer('a', 2)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer or b must be an integer
+
+# Test case 5: incorrect input type (list)
+>>> add_integer([1, 2, 3], 2)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer or b must be an integer
