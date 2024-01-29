@@ -19,7 +19,7 @@ class Rectangle:
             ValueError: if less than 0
         """
         self.width = width
-        self.height= height
+        self.height = height
         Rectangle.number_of_instances += 1
 
     @property
@@ -79,7 +79,8 @@ class Rectangle:
         calculates and return perimeter
         Returns: int
         """
-        return 2 * (self.height + self.width) if self.width != 0 and self.height != 0 else 0
+        return 2 * (self.height + self.width) if self.width != 0 \
+            and self.height != 0 else 0
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self.width, self.height)
@@ -88,7 +89,13 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return ""
         else:
-            return "\n".join([str(self.print_symbol) * self.width for _ in range(self.height)])
+            return "\n".join(
+                [
+                    str(self.print_symbol)
+                    * self.width for _ in range(self.height)
+                ]
+            )
+
     def __del__(self):
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
