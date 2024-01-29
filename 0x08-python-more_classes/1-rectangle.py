@@ -75,4 +75,4 @@ class Rectangle:
         calculates and return perimeter
         Returns: int
         """
-        return 2(self.height) + 2(self.width) if self.width != 0 and self.height != 0 else 0
+        return 2 * (self.height + self.width) if self.width != 0 and self.height != 0 else 0
