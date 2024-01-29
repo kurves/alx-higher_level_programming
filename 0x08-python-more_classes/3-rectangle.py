@@ -16,7 +16,7 @@ class Rectangle:
             ValueError: if less than 0
         """
         self.width = width
-        self.height= height
+        self.height = height
 
     @property
     def width(self):
@@ -75,7 +75,8 @@ class Rectangle:
         calculates and return perimeter
         Returns: int
         """
-        return 2 * (self.height + self.width) if self.width != 0 and self.height != 0 else 0
+        return 2 * (self.height + self.width) if self.width != 0 \
+            and self.height != 0 else 0
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self.width, self.height)
