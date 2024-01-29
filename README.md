@@ -7,3 +7,4 @@
 ### 0x05. Python - Exceptions
 ### function that prints an integer
 ## 0x07. Python - Test-driven development
+## 0x08. Python - More Classes and Objects
