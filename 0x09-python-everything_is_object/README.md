@@ -3,3 +3,4 @@
 ### Function to get the variable identifier of an object
 ### Function to check if objects are the same
 ### function to check if strings are similar
+### Function to check equality of strings
