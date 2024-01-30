@@ -6,3 +6,4 @@
 ### Function to check equality of strings
 ### Function to check if strings are same
 ### Function to check if lists are equal
+### Function to check if lists are equal
