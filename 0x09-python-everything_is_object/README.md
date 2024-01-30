@@ -14,3 +14,5 @@
 ### Function for ;list assignment
 ### Function that copys a list
 ### Function to check for a tuple
+### Function to compare two empty tuples
+### comparing memeory addresses of two objects
