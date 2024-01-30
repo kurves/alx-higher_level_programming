@@ -13,3 +13,4 @@
 ### Function to increament list
 ### Function for ;list assignment
 ### Function that copys a list
+### Function to check for a tuple
