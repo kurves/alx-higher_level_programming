@@ -7,3 +7,4 @@
 ### Function to check if strings are same
 ### Function to check if lists are equal
 ### Function to check if lists are equal
+### Function to append to a list
