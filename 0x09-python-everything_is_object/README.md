@@ -4,3 +4,4 @@
 ### Function to check if objects are the same
 ### function to check if strings are similar
 ### Function to check equality of strings
+### Function to check if strings are same
