@@ -40,8 +40,8 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([-4]), -4)
 
     def test_floats(self):
-        self.assertEqual(max_integer([6.1, 2.2, 4.3]), 6.3)
-        self.assertEqual(max_integer([4.3, 2.2, 6.1]), 6.3)
+        self.assertEqual(max_integer([6.1, 2.2, 4.3]), 6.1)
+        self.assertEqual(max_integer([4.3, 2.2, 6.1]), 6.1)
 
     def test_strings(self):
         self.assertEqual(max_integer(['a', 'b', 'c']), 'c')
@@ -52,8 +52,6 @@ class TestMaxInteger(unittest.TestCase):
         """
         with self.assertRaises(TypeError):
             max_integer([2, 9, "lorry"])
-        with self.assertRaises(TypeError):
-            max_integer([5.9, 0, 6])
 
 
 if __name__ == '__main__':
