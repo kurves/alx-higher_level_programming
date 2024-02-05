@@ -3,7 +3,7 @@
 """Define a class that instanitiate a new instance"""
 
 
-class Square:
+class BaseGeometry:
     """classs tat defines a square."""
     def area(self):
         """"
