@@ -1,0 +1,23 @@
+# Test that area() raises the expected exception
+>>> bg = BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+  ...
+Exception: area() is not implemented
+
+# Doctests for the integer_validator method:
+
+# Test with a valid integer
+>>> bg.integer_validator("width", 10)  # No exception should be raised
+
+# Test with a non-integer value
+>>> bg.integer_validator("height", 3.14)
+Traceback (most recent call last):
+  ...
+TypeError: height must be an integer
+
+# Test with a negative integer
+>>> bg.integer_validator("radius", -5)
+Traceback (most recent call last):
+  ...
+ValueError: radius must be greater than 0
