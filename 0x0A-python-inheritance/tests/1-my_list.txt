@@ -1,0 +1,15 @@
+my_list = MyList([3, 1, 4, 2])
+
+# Test printing the sorted list
+>>> my_list.print_sorted()
+[1, 2, 3, 4]
+
+# Test with an empty list
+>>> empty_list = MyList()
+>>> empty_list.print_sorted()
+[]
+
+# Test with a list containing a single element
+>>> single_element_list = MyList([5])
+>>> single_element_list.print_sorted()
+[5]
