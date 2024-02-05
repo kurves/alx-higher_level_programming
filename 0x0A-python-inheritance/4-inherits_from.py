@@ -1,16 +1,9 @@
 #!/usr/bin/python3
+"""function to compate classess"""
+
 
 def inherits_from(obj, a_class):
-    """
-    (directly or indirectly) from the specified class.
-
-    Parameters:
-        obj: The object to check.
-        a_class: The class to compare against.
-
-    Returns:
-        True if the objecly or indirectly) from the specified class; otherwise False.
-    """
+    """(directly or indirectly) from the specified class"""
     if isinstance(type(obj), a_class):
         return True
     for parent in obj.__class__.__bases__:
