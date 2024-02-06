@@ -1,10 +1,13 @@
 #!/usr/bin/python3
+"""function to load from json"""
+
+
 import json
 import sys
 from os.path import exists
 from save_to_json_file import save_to_json_file
 from load_from_json_file import load_from_json_file
-"""function to load from json"""
+
 
 def add_items_and_save(arguments):    
 	"""function to load json"""

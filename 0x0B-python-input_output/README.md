@@ -5,3 +5,5 @@
 ### function that returns the JSON representation of an object (string
 ### function that returns an object (Python data structure) represented by a JSON string:
 ### function that writes an Object to a text file, using a JSON representation:
+### function that creates an Object from JSON filea 
+###  script that adds all arguments to a Python list, and then save them to a file
