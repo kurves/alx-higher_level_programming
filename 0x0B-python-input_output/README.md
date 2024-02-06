@@ -3,3 +3,5 @@
 ###  function that writes a string to a text file (UTF8) and returns the number of characters written
 ### function that appends a string at the end of a text file (UTF8) and returns the number of characters added:
 ### function that returns the JSON representation of an object (string
+### function that returns an object (Python data structure) represented by a JSON string:
+### function that writes an Object to a text file, using a JSON representation:
