@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-import json
 """function to convert data"""
+
+
+import json
 
 def from_json_string(my_obj):
     """function to convert data"""
