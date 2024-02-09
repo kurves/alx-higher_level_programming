@@ -1,19 +1,15 @@
 #!/usr/bin/python3
 
-"""base claSS defintion"";wq
+"""base claSS defintion"""
 
-
-
-class Square:
+class Base:
     """class defining a class"""
-    def __init__(self, size=0, position=(0,0)):
-        """
-        initializes a new instance of class
-        Args:
-            size(int): optoonal
-        Raises:
-            TypeError: if not int
-            ValueError: if less than 0
-        """
-        self.size = size
-        self.position = position
+     __nb_objects = 0
+
+    def __init__(self, id=None):
+    """defining id attribute"""
+        if id is not None:
+            self.id = id
+        else:
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
