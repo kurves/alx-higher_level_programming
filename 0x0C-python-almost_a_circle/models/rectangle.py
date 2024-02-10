@@ -88,8 +88,4 @@ class Rectangle(Base):
 
     def update(self, *args):
         """function that defines arguments"""
-        self.id = id
-        self.width = width 
-        self.height = height
-        self.x = x
-        self.y = y
+        self.id, self.width, self.height, self.x, self.y  = args
