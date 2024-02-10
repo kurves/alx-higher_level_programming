@@ -85,3 +85,11 @@ class Rectangle(Base):
     def __str__(self):
         """Override str method"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args):
+        """function that defines arguments"""
+        self.id = id
+        self.width = width 
+        self.height = height
+        self.x = x
+        self.y = y
