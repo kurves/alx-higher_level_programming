@@ -29,7 +29,7 @@ class Square(Rectangle):
         """Return a string representation """
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.size)
 
-   def update(self, *args, **kwargs):
+    def update(self, *args, **kwargs):
         """Update attributes"""
         if args:
             attrs = ["id", "size", "x", "y"]
