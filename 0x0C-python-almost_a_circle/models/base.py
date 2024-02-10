@@ -2,12 +2,13 @@
 
 """base claSS defintion"""
 
+
 class Base:
     """class defining a class"""
-     __nb_objects = 0
+    __nb_objects = 0
 
     def __init__(self, id=None):
-    """defining id attribute"""
+        """defining id attribute"""
         if id is not None:
             self.id = id
         else:
