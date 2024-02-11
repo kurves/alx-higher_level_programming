@@ -41,7 +41,7 @@ class Base:
         else:
             return json.loads(json_string)
 
-     @classmethod
+    @classmethod
     def create(cls, **dictionary):
         """Return an instance"""
         if cls.__name__ == "Rectangle":
