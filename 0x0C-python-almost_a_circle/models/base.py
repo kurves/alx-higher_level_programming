@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-
 """base claSS defintion"""
+
 import json
+
 
 class Base:
     """class defining a class"""
