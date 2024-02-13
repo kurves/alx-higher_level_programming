@@ -2,6 +2,7 @@
 """base claSS defintion"""
 
 import json
+import csv
 
 
 class Base:
@@ -63,3 +64,8 @@ class Base:
                 return [cls.create(**data) for data in cls.from_json_string(file.read())]
         except FileNotFoundError:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        filename = cls.__name__ + ".csv"
+        with open(filename, mode='w', newline='') as file:
