@@ -1,5 +1,6 @@
 #!/bin/bash
 
+-- script tocreate database
 # Prompt the user for MySQL credentials
 read -p "Enter MySQL username: " username
 read -sp "Enter MySQL password: " password
