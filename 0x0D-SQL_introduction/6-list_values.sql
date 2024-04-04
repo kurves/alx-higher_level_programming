@@ -1,4 +1,5 @@
 
+-- script to list values from tale
 
 database_name=$1
 
