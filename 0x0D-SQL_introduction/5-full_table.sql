@@ -1,4 +1,5 @@
 
+-- script to describe database
 
 database_name=$1
 table_name=$2
