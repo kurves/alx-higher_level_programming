@@ -1,5 +1,6 @@
-#!/bin/bash
+!/bin/bash
 
+-- script to no of records
 
 database_name=$1
 
