@@ -1,6 +1,5 @@
 #!/bin/bash
-
-# Usage: ./script_name database_name
+-- script to insert data
 
 database_name=$1
 
