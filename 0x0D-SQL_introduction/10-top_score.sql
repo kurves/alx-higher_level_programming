@@ -1,7 +1,6 @@
-#!/bin/bash
+#/bin/bash
 
-# Usage: ./script_name database_name
-
+--script to list tables
 database_name=$1
 
 mysql -u root -p $database_name << EOF
