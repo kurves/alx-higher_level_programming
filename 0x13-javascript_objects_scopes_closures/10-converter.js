@@ -1,9 +1,9 @@
 #!/usr/bin/node
 
-module.exports.converter = function (base) {
-  if (base === 10) {
-    return arguments[1];
-  } else {
-    return parseInt(arguments[1]).toString(base);
+exports.converter = function (base) {
+ function myConverter (n) {
+    return n.toString(base);
   }
+
+  return myConverter;
 };
