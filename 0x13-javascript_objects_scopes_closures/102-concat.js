@@ -2,8 +2,8 @@
 const fs = require('fs');
 
 if (process.argv.length !== 5) {
-    console.log('Usage: node concatFiles.js <sourceFile1> <sourceFile2> <destinationFile>');
-    process.exit(1);
+  console.log('Usage: node concatFiles.js <sourceFile1> <sourceFile2> <destinationFile>');
+  process.exit(1);
 }
 
 const [, , sourceFile1, sourceFile2, destinationFile] = process.argv;
