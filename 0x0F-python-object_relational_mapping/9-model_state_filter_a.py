@@ -21,6 +21,6 @@ if __name__ == "__main__":
     (State.name.like('%a%')).order_by(State.id).all()
 
     for state in states:
-        print("{}: {}".format(state.id, state.name))
+        print("{}: {}".format(state.id + 1 , state.name))
 
     session.close()
