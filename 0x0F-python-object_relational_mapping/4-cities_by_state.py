@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     cur = conn.cursor()
 
-    cur.execute("SELECT * FROM cities ORDER BY id")
+    cur.execute("SELECT * FROM cities ORDER BY id ASC")
 
     rows = cur.fetchall()
 
