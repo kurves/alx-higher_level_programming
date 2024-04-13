@@ -13,12 +13,12 @@ if __name__ == "__main__":
 
     cur = conn.cursor()
 
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id")
 
     rows = cur.fetchall()
 
     for row in rows:
-        print(row)
+        print(row[1])
 
     cur.close()
     conn.close()
