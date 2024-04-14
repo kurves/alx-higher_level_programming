@@ -19,9 +19,8 @@ if __name__ == "__main__":
 
     rows = cur.fetchall()
 
-    if rows is not none:
-        for row in rows:
-            print(row)
+    for row in rows:
+        print(row)
 
     cur.close()
     conn.close()
