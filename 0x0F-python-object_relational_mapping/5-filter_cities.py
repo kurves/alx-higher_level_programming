@@ -13,10 +13,9 @@ if __name__ == "__main__":
 
     cur = conn.cursor()
 
-    query = "SELECT cities.id, cities.name FROM cities \
-             JOIN states ON cities.state_id = states.id \
-             WHERE states.name = %s \
-             ORDER BY cities.id ASC"
+    query = "SELECT cities.name FROM cities \
+             INNER JOIN states ON cities.state_id = states.id \
+             WHERE states.name = %s"
 
     cur.execute(query, (sys.argv[4],))
 
