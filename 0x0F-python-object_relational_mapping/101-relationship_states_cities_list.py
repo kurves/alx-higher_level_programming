@@ -13,7 +13,9 @@ if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]),
                            pool_pre_ping=True)
-
+    
+    Base.metadata.create_all(engine)
+    
     Session = sessionmaker(bind=engine)
 
     session = Session()
@@ -22,7 +24,7 @@ if __name__ == "__main__":
 
     for state in states:
         print("{}: {}".format(state.id, state.name))
-        for city in state.cities:
+        for city in states.cities:
             print("\t{}: {}".format(city.id, city.name))
 
     session.close()
