@@ -15,12 +15,13 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
 
     Base.metadata.create_all(engine)
-    
+
     Session = sessionmaker(bind=engine)
 
     session = Session()
 
-    cities = session.query(State.name, City.id, City.name).filter(State.id == City.state_id).order_by(City.id)
+    cities = session.query(State.name, City.id, City.name).filter
+    (State.id == City.state_id).order_by(City.id)
 
     for city in cities:
         print("{}: ({}) {}".format(city[0], city[1], city[2]))
