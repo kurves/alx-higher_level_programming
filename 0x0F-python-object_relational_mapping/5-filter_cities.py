@@ -20,7 +20,7 @@ if __name__ == "__main__":
     cur.execute(query, (sys.argv[4],))
 
     rows = cur.fetchall()
-    
+
     city_names = [row[0] for row in rows]
 
     print(", ".join(city_names))
