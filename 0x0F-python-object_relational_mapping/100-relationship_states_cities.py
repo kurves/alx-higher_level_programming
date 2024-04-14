@@ -27,7 +27,6 @@ if __name__ == "__main__":
     california.cities.append(san_francisco)
 
     session.add(california)
-    session.add(san_francisco)
 
     session.commit()
 
