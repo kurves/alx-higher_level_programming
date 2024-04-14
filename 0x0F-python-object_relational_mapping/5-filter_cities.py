@@ -21,9 +21,9 @@ if __name__ == "__main__":
     cur.execute(query, (sys.argv[4],))
 
     rows = cur.fetchall()
-
-    for row in rows:
-        print(row[1], end=",")
+    
+    if rows_selected is not None:
+        print(", ".join([row[1] for row in rows]))
 
     cur.close()
     conn.close()
