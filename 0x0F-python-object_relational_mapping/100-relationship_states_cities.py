@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
     california = State(name='California')
 
-    san_francisco = City(name='San Francisco', state=california)
+    san_francisco = City(name='San Francisco')
 
     california.cities.append(san_francisco)
 
