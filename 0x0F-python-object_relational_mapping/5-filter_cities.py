@@ -23,7 +23,7 @@ if __name__ == "__main__":
     rows = cur.fetchall()
 
     for row in rows:
-        print(row[1])
+        print(row[1], end=",")
 
     cur.close()
     conn.close()
