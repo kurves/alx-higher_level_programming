@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
     rows = cur.fetchall()
     
-    city_names = [row[0] for row in rows_selected]
+    city_names = [row[0] for row in rows]
 
     print(", ".join(city_names))
 
