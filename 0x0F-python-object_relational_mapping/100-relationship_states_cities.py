@@ -22,11 +22,12 @@ if __name__ == "__main__":
 
     california = State(name='California')
 
-    san_francisco = City(name='San Francisco')
+    san = City(name='San Francisco')
 
-    california.cities.append(san_francisco)
+    california.cities.append(san)
 
     session.add(california)
+    session.add(san)
 
     session.commit()
 
