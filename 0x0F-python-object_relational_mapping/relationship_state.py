@@ -3,12 +3,13 @@
 Module that contains the class definition of a State.
 """
 
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, Integer, String, ForeignKey, MetaData
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 from relationship_city import Base, City
 
-Base = declarative_base()
+meta = MetaData()
+Base = declarative_base(metadata=meta)
 
 class State(Base):
     """
