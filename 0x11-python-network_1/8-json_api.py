@@ -4,12 +4,18 @@
 import sys
 import requests
 if __name__ == "__main__":
-    url = sys.argv[1]
-    letter = sys.argv[2]
-    req = requests.post(url, data={'letter': letter})
-    body = req.json
-    if body.type == json:
-        print(body)
+    if len(sys.argv) < 2:
+        q = ""
     else:
-        'Not a valid JSON'
-    print(body)
+        q = sys.argv[1]
+    url = "http://0.0.0.0:5000/search_user"
+    letter = {"q": q}
+    req = requests.post(url, data=letter)
+    try:
+        data = req.json()
+        if data:
+            print("[{}] {}".format(data.get("id"), data.get("name")))
+        else:
+            print("No result")
+    except ValueError:
+        print("Not a valid JSON")
