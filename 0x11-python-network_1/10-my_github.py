@@ -15,4 +15,4 @@ if __name__ == "__main__":
         data = req.json()
         print(data["id"])
     else:
-        print("Failed to retrieve GitHub id. Error code:", req.status_code)
+        print("None")
