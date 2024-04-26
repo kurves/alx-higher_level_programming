@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """fetching data using urllib"""
 
-import urllib
+import urllib.request
 
-req = urrlib.request.Request("https://alx-intranet.hbtn.io/status")
+req = urllib.request.Request("https://alx-intranet.hbtn.io/status")
 with urllib.request.urlopen(req) as res:
-    print(res)
+    data = res.read()
+    print(data)
