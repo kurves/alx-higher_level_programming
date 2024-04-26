@@ -10,11 +10,8 @@ if __name__ == "__main__":
     url = "https://api.github.com/user"
     creds = {"username": username, "password": password}
     req = requests.post(url, data=creds)
-    try:
+    if req.status_code == 200:
         data = req.json()
-        if data:
-            print("[{}] {}".format(data.get("id"), data.get("name")))
-        else:
-            print("No result")
-    except ValueError:
-        print("Not a valid JSON")
+        print(data["id"])
+    else:
+        print("Failed to retrieve GitHub id. Error code:", response.status_code)
