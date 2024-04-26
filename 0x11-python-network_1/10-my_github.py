@@ -10,7 +10,7 @@ if __name__ == "__main__":
 
     url = "https://api.github.com/user"
     creds =  HTTPBasicAuth(username, password)
-    req = requests.post(url, data=creds)
+    req = requests.get(url, auth=creds)
     if req.status_code == 200:
         data = req.json()
         print(data["id"])
