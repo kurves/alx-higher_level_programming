@@ -10,7 +10,11 @@ if __name__ == "__main__":
         req = requests.get(url)
         if req.status_code == 200:
             data = req.json()
-            print(data["commit"])
+            try:
+                for i in range(11):
+                    commit = data[i].get("sha")
+                    owner = data[i].get("commit").get("author").get("name")
+                    print("{}: {}".format(commit, owner)
         else:
             print("None")
 
