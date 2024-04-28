@@ -15,6 +15,8 @@ if __name__ == "__main__":
                     commit = data[i].get("sha")
                     owner = data[i].get("commit").get("author").get("name")
                     print("{}: {}".format(commit, owner)
+            except IndexError:
+                pass
         else:
             print("None")
 
