@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """script to query github api"""
+
 import sys
 import requests
 
@@ -14,7 +15,7 @@ if __name__ == "__main__":
                 for i in range(11):
                     commit = data[i].get("sha")
                     owner = data[i].get("commit").get("author").get("name")
-                    print("{}: {}".format(commit, owner)
+                    print("{}: {}".format(commit, owner))
             except IndexError:
                 pass
         else:
