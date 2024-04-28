@@ -2,13 +2,12 @@
 """script to query github api"""
 import sys
 import requests
-from requests.auth import HTTPBasicAuth
 
 if __name__ == "__main__":
     def get_commits(repo, user, count=10):
         repo = sys.argv[1]
         username = sys.argv[2]
-        url = "https://developer.github.com/v3/repos/commits/"
+        url = "https://api.github.com/repos/{}/{}/commits".format(username, repo)
         creds = HTTPBasicAuth(repo, username)
         req = requests.get(url, auth=creds)
         if req.status_code == 200:
