@@ -4,7 +4,6 @@ import sys
 import requests
 
 if __name__ == "__main__":
-    def get_commits(repo, user, count=10):
         repo = sys.argv[1]
         username = sys.argv[2]
         url = "https://api.github.com/repos/{}/{}/commits".format(username, repo)
