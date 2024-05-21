@@ -1,4 +1,4 @@
 -- script to create databse
 -- create a new databae
 
-CREATE DATABASE hbtn_0c_0;
+CREATE DATABASE IF NOT EXISTS hbtn_0c_0;
