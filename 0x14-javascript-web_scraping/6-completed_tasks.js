@@ -2,15 +2,9 @@
 
 const request = require('request');
 const url = process.argv[2];
-
-if (!url) {
-  console.error('Usage: ./script.js <API_URL>');
-  process.exit(1);
-}
-
-request(url, function (err, response, body) {
+request(url, { json: true }, function (err, response, body) {
   if (err) {
-    console.error('Error:', err);
+    console.error(err);
     return;
   }
   
@@ -19,20 +13,15 @@ request(url, function (err, response, body) {
     return;
   }
   
-  const tasks = JSON.parse(body);
-  const completedTasksByUser = {};
-
-  tasks.forEach(task => {
-    if (task.completed) {
-      if (!completedTasksByUser[task.userId]) {
-        completedTasksByUser[task.userId] = 0;
+  const tasksCompleted = {};
+  body.forEach((todo) => {
+    if (todo.completed) {
+      if (!tasksCompleted[todo.userId]) {
+        tasksCompleted[todo.userId] = 1;
+      } else {
+        tasksCompleted[todo.userId] += 1;
       }
-      completedTasksByUser[task.userId]++;
     }
   });
-
-  for (const userId in completedTasksByUser) {
-    console.log(`'${userId}': ${completedTasksByUser[userId]}`);
-  }
+  console.log(tasksCompleted);
 });
-
