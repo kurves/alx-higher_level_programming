@@ -1,35 +1,38 @@
 #!/usr/bin/node
 
 const request = require('request');
+const url = process.argv[2];
 
-const apiUrl = process.argv[2];
-
-if (!apiUrl) {
-  console.error('Please provide the API URL as the first argument.');
+if (!url) {
+  console.error('Usage: ./script.js <API_URL>');
   process.exit(1);
 }
 
-request(apiUrl, (error, response, body) => {
-  if (error) {
-    console.error('Error making the request:', error);
+request(url, function (err, response, body) {
+  if (err) {
+    console.error('Error:', err);
     return;
   }
-
-  const todos = JSON.parse(body);
-
+  
+  if (response.statusCode !== 200) {
+    console.error('An error occurred. Status code:', response.statusCode);
+    return;
+  }
+  
+  const tasks = JSON.parse(body);
   const completedTasksByUser = {};
 
-  todos.forEach(todo => {
-    if (todo.completed) {
-      if (!completedTasksByUser[todo.userId]) {
-        completedTasksByUser[todo.userId] = 0;
+  tasks.forEach(task => {
+    if (task.completed) {
+      if (!completedTasksByUser[task.userId]) {
+        completedTasksByUser[task.userId] = 0;
       }
-      completedTasksByUser[todo.userId]++;
+      completedTasksByUser[task.userId]++;
     }
   });
-  console.log("{");
+
   for (const userId in completedTasksByUser) {
-    console.log(`"${userId}": ${completedTasksByUser[userId]},`);
+    console.log(`'${userId}': ${completedTasksByUser[userId]}`);
   }
-  console.log("}");
 });
+
