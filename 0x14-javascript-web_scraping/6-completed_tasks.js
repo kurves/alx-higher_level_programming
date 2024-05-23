@@ -6,7 +6,7 @@ request(url, { json: true }, function (err, response, body) {
   if (err) {
     console.error(err);
     return;
-  } 
+  }
   if (response.statusCode !== 200) {
     console.error('An error occurred. Status code:', response.statusCode);
     return;
