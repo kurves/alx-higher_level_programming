@@ -27,8 +27,9 @@ request(apiUrl, (error, response, body) => {
       completedTasksByUser[todo.userId]++;
     }
   });
-
+  console.log("{");
   for (const userId in completedTasksByUser) {
-    console.log(`User ${userId} has completed ${completedTasksByUser[userId]} tasks`);
+    console.log(`"${userId}": ${completedTasksByUser[userId]},`);
   }
+  console.log("}");
 });
