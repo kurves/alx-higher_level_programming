@@ -9,15 +9,12 @@ request(apiUrl, function (err, response, body) {
     console.error(err);
     return;
   }
-  
   if (response.statusCode !== 200) {
     console.error('An error occurred. Status code:', response.statusCode);
     return;
   }
-  
   const filmData = JSON.parse(body);
   const characters = filmData.characters;
-  
   const fetchCharacter = (url, callback) => {
     request(url, (err, response, body) => {
       if (err) {
@@ -31,7 +28,6 @@ request(apiUrl, function (err, response, body) {
       callback(null, JSON.parse(body).name);
     });
   };
-  
   const fetchAllCharacters = (index) => {
     if (index >= characters.length) {
       return;
@@ -45,7 +41,5 @@ request(apiUrl, function (err, response, body) {
       fetchAllCharacters(index + 1);
     });
   };
-  
   fetchAllCharacters(0);
 });
-
