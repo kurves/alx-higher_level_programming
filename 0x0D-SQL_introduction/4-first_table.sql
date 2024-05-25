@@ -1,11 +1,5 @@
-#!/bin/bash
-
+-- create table
 -- script to list databases
-
-if [ "$#" -ne 1 ]; then
-    echo "Usage: $0 <database_name>"
-    exit 1
-fi
 
 database_name="$1"
 
