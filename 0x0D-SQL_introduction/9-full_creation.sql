@@ -1,9 +1,5 @@
-#!/bin/bash
 -- script to insert data
 
-database_name=$1
-
-mysql -u root -p $database_name << EOF
 CREATE TABLE IF NOT EXISTS second_table (
     id INT,
     name VARCHAR(256),
