@@ -1,3 +1,3 @@
-var headerElement = document.querySelector('header');
-
-headerElement.style.color = '#FF0000';
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector('HEADER').style.color = '#FF0000';
+});
