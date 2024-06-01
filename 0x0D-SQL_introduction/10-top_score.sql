@@ -1,4 +1,4 @@
---script to list tables
+-- script to list tables
 
 SELECT `score`, `name`
 FROM `second_table`
