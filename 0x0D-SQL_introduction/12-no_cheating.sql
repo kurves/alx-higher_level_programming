@@ -1,4 +1,4 @@
---script to records lisit
+-- script to records lisit
 
 UPDATE second_table
 SET score = 10
