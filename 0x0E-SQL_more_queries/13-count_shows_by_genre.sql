@@ -1,3 +1,5 @@
+-- script to join tables
+
 SELECT genres.name AS genre, COUNT(tv_show_genres.show_id) AS number_of_shows
 FROM genres
 JOIN tv_show_genres ON genres.id = tv_show_genres.genre_id
