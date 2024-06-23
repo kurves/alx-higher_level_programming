@@ -1,3 +1,4 @@
+-- script to join tables
 
 SELECT genres.name
 FROM genres
