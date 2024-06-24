@@ -1,4 +1,5 @@
--- 
+-- script to etch specific genre
+
 SELECT
     g.name AS tv_genres_name
 FROM
